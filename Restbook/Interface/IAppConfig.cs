@@ -8,7 +8,7 @@ namespace Restbook.Interface
     public interface IAppConfig
     {
         string ApiURL { get; set; }
-        string StsServerURL { get; set; }
+        string StsURL { get; set; }
         string Authority { get; set; }
     }
 }
