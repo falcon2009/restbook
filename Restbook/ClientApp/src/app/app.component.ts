@@ -18,12 +18,19 @@ export class AppComponent {
   ngOnInit() {
     this.modelSubscription = this.modelService.getTop().subscribe(
       modelArray => {
-        let model = new CompanyModel();
-        Object.assign(model, modelArray[0]);
-        this.model = model;
+        this.model = modelArray[0];
     });
   }
   ngOnDestroy(){
     if (this.modelSubscription != null || !this.modelSubscription.closed) this.modelSubscription.unsubscribe();
+  }
+
+  public getIn(){
+    
+  }
+  get restoranID(): string{
+    if (this.model === undefined && this.model == null) return '';
+
+    return this.model.guid;
   }
 }
