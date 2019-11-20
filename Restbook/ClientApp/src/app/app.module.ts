@@ -9,12 +9,14 @@ import { HomeComponent } from './component/home/home.component';
 import { ConfigService } from './service/config.service';
 import { CompanyService } from './service/company.service';
 import { RestoranComponent } from './component/restoran/restoran.component';
+import { RestoranDetailsComponent } from './component/restoran.details/restoran.details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RestoranComponent
+    RestoranComponent,
+    RestoranDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyService } from 'src/app/service/company.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restoran',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestoranComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modelService: CompanyService, private router: Router) { }
 
   ngOnInit() {
+    this.router.
   }
 
 }
