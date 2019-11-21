@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AppConfig } from '../model/appconfig';
 import { Observable, of } from 'rxjs';
-import { tap} from 'rxjs/operators'
+import { tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +13,10 @@ export class ConfigService {
 
   constructor(private http: HttpClient) { }
 
-  public get AppConfig(): Observable<AppConfig>{
+  public get AppConfig(): Observable<AppConfig> {
     const source = (this.config != null)
                       ? of(this.config)
-                      : this.http.get<AppConfig>(this.endpoint).pipe(tap(model=> this.config = model));
+                      : this.http.get<AppConfig>(this.endpoint).pipe(tap(model => this.config = model));
     return source;
   }
 
@@ -26,7 +26,7 @@ export class ConfigService {
 
     return storageConfig;
   }
-  
+
   private set config(conf: AppConfig) {
     sessionStorage.setItem(this.key, JSON.stringify(conf));
   }

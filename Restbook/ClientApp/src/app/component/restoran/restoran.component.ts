@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+import { ActivatedRoute } from '@angular/router';
 import { CompanyService } from 'src/app/service/company.service';
-import { Router } from '@angular/router';
+import { Subscription, Observable } from 'rxjs';
+import { CompanyModel } from 'src/app/model/company.model';
+import { tap, switchMap } from 'rxjs/operators';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-restoran',
@@ -8,11 +13,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./restoran.component.scss']
 })
 export class RestoranComponent implements OnInit {
+public modelID: string;
+public modelSource: Observable<CompanyModel>;
 
-  constructor(private modelService: CompanyService, private router: Router) { }
+  private routSubscription: Subscription;
+  constructor(private modelService: CompanyService, private router: ActivatedRoute) { }
 
   ngOnInit() {
-    this.router.
+    this.modelSource = this.router.params.pipe(
+                        switchMap( params => {
+                          const id = params['id'];
+                          this.modelID = id;
+                          return this.modelService.getModel(id);
+                        })
+                      );
   }
-
 }
