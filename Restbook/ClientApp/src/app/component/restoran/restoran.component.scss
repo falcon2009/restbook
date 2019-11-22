@@ -1,7 +1,8 @@
-@import "../style/style.config.scss";
+@import "../../../style/style.config.scss";
 
 .container{
     margin-top: 10px;
+    @include column-center-right;
 }
 .left-block {
     width: 20vw;

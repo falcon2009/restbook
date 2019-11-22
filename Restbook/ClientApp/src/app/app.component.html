@@ -1,18 +1,14 @@
 <div class="header border-bottom">
     <div class="header-action">
         <div class="header-logo" [routerLink]="['/']"></div>
-        <div class="menu-button rounded first-after-logo" [routerLink]="['/restoran', restoranID]">Get in</div>
+        <div class="menu-button rounded first-after-logo" (click)="move()">{{caption}}</div>
         <div class="menu-button rounded">Make an order</div>       
     </div>
     <div class="header-login">
         <div class="menu-button rounded">Introduce yourself</div>     
     </div>
 </div>
-<div></div>
 <div class="main">
     <router-outlet></router-outlet>
-</div>
-<div class="footer border-top">
-
 </div>
 

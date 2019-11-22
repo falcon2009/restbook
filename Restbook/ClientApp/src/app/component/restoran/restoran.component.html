@@ -1,5 +1,10 @@
-<div class="container column-center-right">
-    <div class="col-sm"></div>
-    <div class="main-block"></div>
-    <div></div>
+<div class="container" style="border: 1px solid red;">
+    <div class="col-2 d-block-md">aaa</div>
+    <div class="main-block col-lg-8 col-md-12" *ngIf="model$ | async as model">
+        hi
+    </div>
+    <div class="main-block col-lg-8 col-md-12" *ngIf="!model$">
+        No Locations found
+    </div>
+    <div class="col-2 d-block-md">bbb</div>
 </div>

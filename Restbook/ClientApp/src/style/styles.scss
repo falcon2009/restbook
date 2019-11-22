@@ -6,8 +6,9 @@ body{
     font-size: large;
 }
 .menu-button {
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
+    text-align: center;
 }
 .menu-button:hover {
     background: $ghostwhite;
