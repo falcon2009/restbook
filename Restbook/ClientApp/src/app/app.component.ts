@@ -33,6 +33,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.navigate(command);
   }
 
+  public out() {
+    this.isIn = false;
+    const command = ['/'];
+    this.router.navigate(command)
+  }
+
   public get caption(): string {
     return this.isIn ? 'Get out' : 'Get in';
   }

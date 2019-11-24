@@ -1,0 +1,20 @@
+@import '../../../style/style.config.scss';
+
+.main-container {
+    width: 60vw;
+    padding-top: 1rem;
+    border-bottom: 1px solid silver;
+    @include column-left-left;
+}
+.item-main {
+    @include row-left-left
+}
+.item-attention {
+    @include column-left-left
+}
+.item-key-value {
+    @include row-left-center
+}
+.item-value {
+    opacity: 0.8;
+}

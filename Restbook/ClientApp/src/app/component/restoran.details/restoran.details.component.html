@@ -1,1 +1,32 @@
-<p>restoran.details works!</p>
+<div class="main-container">
+    <div class="item-main">
+        <div>
+            <img src="{{model.imageInfo}}"/>
+        </div>
+        <div>
+            <div>{{model.name}}</div>
+            <div class="item-key-value">
+                <div>Time of work:</div>
+                <div class="item-value">{{model.workTimeFrom}} - {{model.workTimeTo}}</div>
+            </div>
+            <div class="item-key-value">
+                <div>Cooking:</div>
+                <div class="item-value">{{model.cookDescription}}</div>
+            </div>
+            <div class="item-key-value">
+                <div>Menu:</div>
+                <div *ngFor="let item of model.catalogs" class="item-value">{{item.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="item-attention">
+        <div *ngIf="hasAction" class="item-key-value">
+            <div>Actions:</div>
+            <div class="item-value"> {{model.actionDescription}}</div>
+        </div>
+        <div *ngIf="hasEvent" class="item-key-value">
+            <div>Events:</div>
+            <div class="item-value">{{model.eventDescription}}</div>
+        </div>
+    </div>
+</div>
