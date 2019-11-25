@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AppConfig } from '../model/appconfig';
+import { AppConfig } from '../shared/model/appconfig';
 import { Observable, of } from 'rxjs';
 import { tap} from 'rxjs/operators';
 

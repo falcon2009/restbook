@@ -1,5 +1,5 @@
 export class AddressModel {
-    [key:string]:any;
+    [key: string]: any;
     public city: string;
     public street: string;
     public house: string;
@@ -8,5 +8,5 @@ export class AddressModel {
     public flat: string;
     public country: string;
     public zipCode: string;
-    public region: string;    
+    public region: string;
 }

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from './config.service';
-import { pipe, Observable, of } from 'rxjs';
-import { CompanyModel } from '../model/company.model';
-import { map, flatMap, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { CompanyModel } from '../shared/model/company.model';
+import { flatMap, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

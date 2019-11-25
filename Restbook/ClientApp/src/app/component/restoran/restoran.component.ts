@@ -3,9 +3,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CompanyService } from 'src/app/service/company.service';
 import { Subscription, Observable, Subject, AsyncSubject, BehaviorSubject, ReplaySubject } from 'rxjs';
-import { CompanyModel } from 'src/app/model/company.model';
-import { tap, switchMap } from 'rxjs/operators';
-import { async } from '@angular/core/testing';
+import { CompanyModel } from '../../shared/model/company.model';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-restoran',
