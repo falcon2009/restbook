@@ -1,16 +1,7 @@
 @import "../../../style/style.config.scss";
+.container {
+    min-width:100vw;
+    padding-top: 5px;
+    @include row-left-left;
+}
 
-.main-container{
-    padding-top: $header-height;
-    @include row-left-center;
-}
-.left-block {
-    width: 10vw;
-}
-.main-block {
-    width: 50vw;
-    @include column-left-left
-}
-.with-border{
-    border: 1px solid red;
-}

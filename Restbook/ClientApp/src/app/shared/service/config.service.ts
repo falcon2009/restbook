@@ -17,11 +17,14 @@ export class ConfigService {
     const source = (this.config != null)
                       ? of(this.config)
                       : this.http.get<AppConfig>(this.endpoint).pipe(tap(model => this.config = model));
+
     return source;
   }
 
   private get config(): AppConfig {
     const storageConfigStr = sessionStorage.getItem(this.key);
+    if( storageConfigStr == null || storageConfigStr === undefined) return null;
+
     const storageConfig: AppConfig = JSON.parse(storageConfigStr);
 
     return storageConfig;

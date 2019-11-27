@@ -1,10 +1,10 @@
 <div class="main-container">
     <div class="item-main">
         <div>
-            <img src="{{model.imageInfo}}"/>
+            <img class="image" src="{{model.imageInfo}}" (click)="openScheme()"/>
         </div>
-        <div>
-            <div>{{model.name}}</div>
+        <div style="padding-left: 15px">
+            <div class="position" (click)="openScheme()">{{model.name}}</div>
             <div class="item-key-value">
                 <div>Time of work:</div>
                 <div class="item-value">{{model.workTimeFrom}} - {{model.workTimeTo}}</div>
@@ -14,8 +14,8 @@
                 <div class="item-value">{{model.cookDescription}}</div>
             </div>
             <div class="item-key-value">
-                <div>Menu:</div>
-                <div *ngFor="let item of model.catalogs" class="item-value">{{item.name}}</div>
+                <div style="padding-right: 15px">Menu:</div>
+                <div *ngFor="let item of model.catalogs" class="position" (click)="openCatalogue(item.guid)">{{item.name}}</div>
             </div>
         </div>
     </div>

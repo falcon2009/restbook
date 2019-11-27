@@ -1,0 +1,10 @@
+@import '../../../style/style.config.scss';
+
+.main {
+    padding-top:$header-height;
+    min-height: 45px;
+    width: 100vw;
+    background:$white;  
+    border-bottom: 1px solid $background;
+    @include row-left-center;
+}

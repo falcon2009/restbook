@@ -10,6 +10,16 @@ body{
     cursor: pointer;
     text-align: center;
 }
-.menu-button:hover {
-    background: $ghostwhite;
+
+.left-block {
+    width: 10vw;
+}
+
+.main-block {
+    width: 50vw;
+    @include column-left-left
+}
+
+.with-border{
+    border: 1px solid red;
 }
