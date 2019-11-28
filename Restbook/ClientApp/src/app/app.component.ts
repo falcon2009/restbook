@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CompanyService } from './service/company.service';
-import { CompanyModel } from './shared/model/company.model';
+import { CompanyModel } from './model/company.model';
 import { Router } from '@angular/router';
 
 @Component({

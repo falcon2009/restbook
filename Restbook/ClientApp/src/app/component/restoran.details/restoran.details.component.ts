@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CompanyService } from 'src/app/service/company.service';
-import { LocationModel } from '../../shared/model/location.model';
+import { LocationModel } from 'src/app/model/location.model';
 
 @Component({
   selector: 'app-restoran-details',
@@ -9,7 +9,7 @@ import { LocationModel } from '../../shared/model/location.model';
 })
 export class RestoranDetailsComponent implements OnInit {
 
-  @Input() model: LocationModel;
+  @Input('model') model: LocationModel;
 
   constructor(private modelService: CompanyService) { }
 
@@ -19,11 +19,11 @@ export class RestoranDetailsComponent implements OnInit {
     this.model.imageInfo = fileUrl;
   }
 
-  public get hasAction(): boolean {
+  public get hasAction():boolean {
      return (this.model != null && this.model !== undefined && this.model.actionDescription !== '');
   }
 
-  public get hasEvent(): boolean {
+  public get hasEvent():boolean {
     return (this.model != null && this.model !== undefined && this.model.eventDescription !== '');
  }
 }
