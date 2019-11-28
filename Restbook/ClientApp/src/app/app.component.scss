@@ -3,7 +3,7 @@
 .header{
     height: $header-height;
     width: 100vw;
-    background:$white;
+    background:$background;
     position: fixed;
     @include row-sb-center
 }
@@ -28,9 +28,6 @@
     margin-left: $margin-left;
     margin-right: 20px;
     min-width: 100px;
-}
-.main {
-    min-height: calc(100vh - 140px);
 }
 
 .footer {

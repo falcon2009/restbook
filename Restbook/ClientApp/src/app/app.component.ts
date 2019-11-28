@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CompanyService } from './service/company.service';
-import { CompanyModel } from './model/company.model';
+import { CompanyModel } from './shared/model/company.model';
 import { Router } from '@angular/router';
+import { StateService } from './shared/service/state.service';
 
 @Component({
   selector: 'app-root',
@@ -10,26 +11,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  public model: CompanyModel;
+  public model: CompanyModel = new CompanyModel();
   public title = 'Restbook';
   public isIn = false;
   private modelSubscription: Subscription;
 
-  constructor(private modelService: CompanyService, private router: Router) { }
+  constructor(private modelService: CompanyService, private stateService: StateService, private router: Router) { }
 
   ngOnInit() {
     this.modelSubscription = this.modelService.getTop().subscribe(
       modelArray => {
-        this.model = modelArray[0];
+        const model = modelArray[0];
+        Object.assign(this.model, model);
+        this.stateService.setActiveCompany(this.model);
     });
   }
+  
   ngOnDestroy() {
     if (this.modelSubscription != null || !this.modelSubscription.closed) { this.modelSubscription.unsubscribe(); }
   }
 
   public move() {
     this.isIn = !this.isIn;
-    const command = this.isIn ? ['/restoran', this.restoranID] : ['/'];
+    const command = this.isIn ? ['/company'] : ['/'];
     this.router.navigate(command);
   }
 

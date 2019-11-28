@@ -1,10 +1,9 @@
-<div class="main-container">
-    <div class="left-block"></div>
-    <div class="main-block" *ngIf="model$ | async as model">
-        <app-restoran-details *ngFor="let location of model.locations" [model]="location"></app-restoran-details>
+<div class="container">
+    <div class="left-block">
+        <app-restoran-leftmenu></app-restoran-leftmenu>
     </div>
-    <div class="main-block col-lg-8 col-md-12" *ngIf="!model$">
-        No Locations found
+    <div class="main-block">
+        <router-outlet></router-outlet>
     </div>
     <div></div>
 </div>
