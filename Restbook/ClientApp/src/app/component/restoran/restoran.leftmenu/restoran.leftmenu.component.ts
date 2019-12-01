@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/shared/service/state.service';
+import { Observable, of } from 'rxjs';
+import { ViewMode } from 'src/app/shared/enum/view.mode';
+import { filter, flatMap } from 'rxjs/operators';
 
 
 @Component({
@@ -8,8 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestoranLeftMenuComponent implements OnInit {
 
-  constructor() { }
+  public isVisible$: Observable<boolean>;
+  constructor(private stateService: StateService) { }
 
   ngOnInit() {
+    this.isVisible$ = this.stateService.viewMode$.pipe(
+      flatMap(item => {
+          const isVisible = (item === ViewMode.Menu || item === ViewMode.Scheme); 
+          return of(isVisible);
+      })
+    );
   }
 }

@@ -1,6 +1,6 @@
-<div class="main" *ngIf="model$ | async as model">
+<div *ngIf="model$ | async as model" class="main">
     <app-location-details *ngFor="let location of model.locations" [model]="location" [companyID]="model.guid"></app-location-details>
 </div>
-<div class="main col-lg-8 col-md-12" *ngIf="!model$">
+<div *ngIf="!model$" class="main col-lg-8 col-md-12">
     No Locations found
 </div>

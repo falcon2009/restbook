@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewMode } from 'src/app/shared/enum/view.mode';
+import { StateService } from 'src/app/shared/service/state.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stateService: StateService) { }
 
   ngOnInit() {
+    const viewMode = ViewMode.Scheme;
+    this.stateService.setViewMode(viewMode);
   }
 }

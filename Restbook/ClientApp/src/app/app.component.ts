@@ -46,10 +46,4 @@ export class AppComponent implements OnInit, OnDestroy {
   public get caption(): string {
     return this.isIn ? 'Get out' : 'Get in';
   }
-
-  get restoranID(): string {
-    if (this.model === undefined && this.model == null) { return ''; }
-
-    return this.model.guid;
-  }
 }

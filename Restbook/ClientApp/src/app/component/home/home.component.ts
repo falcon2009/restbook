@@ -14,6 +14,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const mode = ViewMode.Home;
-    this.stateService.setMode(mode);
+    this.stateService.setViewMode(mode);
   }
 }

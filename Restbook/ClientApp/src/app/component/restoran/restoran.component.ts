@@ -15,13 +15,5 @@ public model$: Observable<CompanyModel>;
   constructor() { }
 
   ngOnInit() {
-    // this.model$ = this.router.params.pipe(
-    //                     switchMap( params => {
-    //                       const id = params['id'];
-    //                       this.modelID = id;
-    //                       return this.modelService.getModel(id);
-    //                     })
-    //                   );
-    // this.viewMode$ = this.viewModeService.viewMode;
   }
 }

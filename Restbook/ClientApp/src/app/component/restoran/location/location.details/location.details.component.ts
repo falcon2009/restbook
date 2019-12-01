@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CompanyService } from 'src/app/service/company.service';
 import { LocationModel } from 'src/app/shared/model/location.model';
 import { Router } from '@angular/router';
-
-
+import { StateService } from 'src/app/shared/service/state.service';
 
 @Component({
   selector: 'app-location-details',
@@ -15,7 +13,7 @@ export class LocationDetailsComponent implements OnInit {
   @Input() companyID: string;
   @Input() model: LocationModel;
 
-  constructor(private router: Router) { }
+  constructor(private stateService: StateService, private router: Router) { }
 
   ngOnInit() {
     const fileName = this.model.imageInfo;
@@ -32,12 +30,14 @@ export class LocationDetailsComponent implements OnInit {
  }
 
  public openScheme() {
-  const command = ['restoran', this.companyID, 'scheme'];
+  // this.stateService.setActiveLocation(this.model);
+  const command = ['/company', 'scheme'];
   this.router.navigate(command);
  }
 
  public openCatalogue(id: string) {
-  const command = ['restoran', this.companyID, 'menu'];
+  // this.stateService.setActiveLocation(this.model); 
+  const command = ['/company', 'menu'];
   this.router.navigate(command);
  }
 }
