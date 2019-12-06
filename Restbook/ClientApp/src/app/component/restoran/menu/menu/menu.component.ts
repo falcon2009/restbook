@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewMode } from 'src/app/shared/enum/view.mode';
-import { StateService } from 'src/app/shared/service/state.service';
+import { ViewMode } from 'src/app/enum/view.mode';
+import { StateService } from 'src/app/service/state.service';
 
 @Component({
   selector: 'app-menu',

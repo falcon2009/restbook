@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CompanyService } from 'src/app/service/company.service';
 import { Subscription } from 'rxjs';
-import { StateService } from 'src/app/shared/service/state.service';
-import { ViewMode } from 'src/app/shared/enum/view.mode';
+import { StateService } from 'src/app/service/state.service';
+import { ViewMode } from 'src/app/enum/view.mode';
 
 @Component({
   selector: 'app-home',

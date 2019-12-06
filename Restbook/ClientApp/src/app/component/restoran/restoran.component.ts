@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { CompanyModel } from '../../shared/model/company.model';
+import { CompanyModel } from '../../model/company.model';
 
 @Component({
   selector: 'app-restoran',

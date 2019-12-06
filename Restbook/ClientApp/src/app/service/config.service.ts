@@ -23,7 +23,8 @@ export class ConfigService {
 
   private get config(): AppConfig {
     const storageConfigStr = sessionStorage.getItem(this.key);
-    if( storageConfigStr == null || storageConfigStr === undefined) return null;
+    if( storageConfigStr == null || storageConfigStr === undefined) {
+      return null; }
 
     const storageConfig: AppConfig = JSON.parse(storageConfigStr);
 

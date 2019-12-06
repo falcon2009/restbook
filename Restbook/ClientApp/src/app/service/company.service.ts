@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ConfigService } from '../shared/service/config.service';
+import { ConfigService } from '../service/config.service';
 import { Observable, of } from 'rxjs';
-import { CompanyModel } from '../shared/model/company.model';
+import { CompanyModel } from '../model/company.model';
 import { flatMap, tap } from 'rxjs/operators';
 
 @Injectable({

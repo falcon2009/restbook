@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { merge } from 'rxjs/operators'
-import { CompanyModel } from 'src/app/shared/model/company.model';
-import { StateService } from 'src/app/shared/service/state.service';
-import { ViewMode } from 'src/app/shared/enum/view.mode';
+import { CompanyModel } from 'src/app/model/company.model';
+import { StateService } from 'src/app/service/state.service';
+import { ViewMode } from 'src/app/enum/view.mode';
 
 @Component({
   selector: 'app-location-list',
@@ -12,7 +12,7 @@ import { ViewMode } from 'src/app/shared/enum/view.mode';
 })
 export class LocationListComponent implements OnInit {
 public modelID: string;
-public model$
+public model$: Observable<CompanyModel>;
 
   constructor(private stateService: StateService) { }
 

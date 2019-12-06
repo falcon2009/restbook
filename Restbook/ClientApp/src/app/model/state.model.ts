@@ -6,10 +6,14 @@ import { AppMode } from '../enum/app.mode';
 import { UserType } from '../enum/user.type';
 
 export interface StateModel {
-    userType?: UserType,
-    appMode?: AppMode,
-    viewMode?: ViewMode,
-    activeCompany?: CompanyModel,
-    activeLocation?: LocationModel,
-    activeCatalog?: CatalogModel,
+    userType: UserType | null;
+    appMode?: AppMode | null;
+    viewMode?: ViewMode | null;
+    activeCompany?: CompanyModel | null;
+    activeLocation?: LocationModel | null;
+    activeCatalog?: CatalogModel | null;
+}
+
+export function initialState(): StateModel {
+    
 }

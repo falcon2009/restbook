@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { StateService } from 'src/app/shared/service/state.service';
+import { StateService } from 'src/app/service/state.service';
 import { Observable, of } from 'rxjs';
-import { ViewMode } from 'src/app/shared/enum/view.mode';
+import { ViewMode } from 'src/app/enum/view.mode';
 import { filter, flatMap } from 'rxjs/operators';
 
 

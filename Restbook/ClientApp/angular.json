@@ -103,7 +103,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/style/styles.scss"
             ],
             "scripts": [],
@@ -161,5 +161,8 @@
     "@schematics/angular:component": {
       "styleext": "scss"
     }
+  },
+  "cli": {
+    "defaultCollection": "@datorama/akita"
   }
 }

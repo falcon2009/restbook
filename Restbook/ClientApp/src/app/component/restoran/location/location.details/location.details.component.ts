@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LocationModel } from 'src/app/shared/model/location.model';
+import { LocationModel } from 'src/app/model/location.model';
 import { Router } from '@angular/router';
-import { StateService } from 'src/app/shared/service/state.service';
+import { StateService } from 'src/app/service/state.service';
 
 @Component({
   selector: 'app-location-details',
