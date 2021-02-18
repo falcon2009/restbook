@@ -1,0 +1,14 @@
+<div class="header">
+    <div class="header-action">
+        <div class="header-logo" (click)="out()"></div>
+        <div class="menu-button rounded first-after-logo" (click)="move()">{{caption}}</div>
+        <div class="menu-button rounded">Make an order</div>       
+    </div>
+    <div class="header-login">
+        <div class="menu-button rounded">Introduce yourself</div>     
+    </div>
+</div>
+<app-toolbar *ngIf="isIn"></app-toolbar>
+<div>
+    <router-outlet></router-outlet>
+</div>

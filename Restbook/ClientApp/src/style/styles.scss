@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "style.config.scss";
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.menu-item {
+    
+}
+.menu-button {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.left-block {
+    width: 10vw;
+}
+
+.main-block {
+    width: 50vw;
+    @include column-left-left
+}
+
+.with-border{
+    border: 1px solid red;
+}

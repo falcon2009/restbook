@@ -1,0 +1,7 @@
+@import "../../../style/style.config.scss";
+.container {
+    min-width:100vw;
+    padding-top: 5px;
+    @include row-left-left;
+}
+

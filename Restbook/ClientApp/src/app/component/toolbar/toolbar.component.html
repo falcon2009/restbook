@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="menu-button" [routerLink]="['company']">Locations</div>
+    <ng-container *ngIf="(isVisible$ | async) === true">
+        <div class="btn-group">
+            <!-- <div class="menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{(activeLocation$ | async).name}}</div>
+            <div class="dropdown-menu">
+                <div *ngFor="let model of (activeCompany$ | async).locations" class="dropdown-item" (click)="changeLocation(model)">{{model.name}}</div>
+            </div> -->
+        </div>
+    </ng-container>
+</div>

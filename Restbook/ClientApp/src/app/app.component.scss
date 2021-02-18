@@ -1,0 +1,36 @@
+@import "../style/style.config.scss";
+
+.header{
+    height: $header-height;
+    width: 100vw;
+    background:$background;
+    position: fixed;
+    @include row-sb-center
+}
+
+.header-action {
+    width: 70vw;
+    margin-left: $margin-left;
+    @include row-left-center;
+}
+.header-logo {
+    height:64px;
+    width: 114px;
+    background: url(/assets/logo_black.png) no-repeat center;
+    cursor: pointer;
+}
+
+.header-login {
+    margin-right: $margin-right
+}
+
+.first-after-logo{
+    margin-left: $margin-left;
+    margin-right: 20px;
+    min-width: 100px;
+}
+
+.footer {
+    height:$footer-height;
+    background: $ghostwhite;
+}
